@@ -27,8 +27,6 @@
 					"Comment:  ".$_POST['comments']);
 			}
 		}
-
-		/*mail($mailTo, $subject, $message, $headers);*/
 		
 	?>
 
@@ -41,16 +39,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
+	<style>
+		#errors{
+			margin: 5px 0 10px 10px;
+			color: red;
+		}
+	</style>
+
 </head>
 <body>
 
 <div>
 	<h3>Contact Us</h3>
-
+	<div id="errors">
 	<?php
 		echo $results;
 	?>
-
+	</div>
 	<form method="post">
 
 		<label for="name">Name</label>
